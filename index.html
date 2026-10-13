@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- El tamaño estándar para las apps de Viera antiguas es 1280x720 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App Panasonic Viera</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111111;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 { margin-top: 20%; color: #00aaff; }
+        .boton {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #333;
+            border: 2px solid #00aaff;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .boton:focus { background-color: #00aaff; color: black; }
+    </style>
+</head>
+<body>
+
+    <h1>¡Hola Panasonic Viera!</h1>
+    <p>Esta es mi primera App HTML5 ejecutada localmente.</p>
+    <div class="boton" id="btn1" tabindex="0">Botón de Prueba</div>
+
+    <script>
+        // Mapeo básico de teclas para el mando de Panasonic
+        document.addEventListener('keydown', function(e) {
+            switch(e.keyCode) {
+                case 13: // Tecla OK / ENTER
+                    alert('¡Pulsaste OK en el mando!');
+                    break;
+                case 37: // Flecha Izquierda
+                    break;
+                case 39: // Flecha Derecha
+                    break;
+                // Códigos antiguos de Panasonic Viera:
+                case 415: // PLAY
+                    break;
+                case 19:  // PAUSE
+                    break;
+            }
+        });
+        
+        // Auto-enfocar el botón para interactuar con el mando
+        document.getElementById('btn1').focus();
+    </script>
+</body>
+</html>
